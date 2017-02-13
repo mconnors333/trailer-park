@@ -1,9 +1,9 @@
 {
-  "name": "complete-intro-to-react",
+  "name": "trailer-park",
   "version": "1.0.0",
-  "description": "A two day workshop on a complete intro to React",
+  "description": "An app that allows users to see upcoming shows",
   "main": "index.js",
-  "author": "Brian Holt <btholt@gmail.com>",
+  "author": "Matthew Connors",
   "license": "MIT",
   "scripts": {
     "lint": "eslint js/**/*.js webpack.config.js",
