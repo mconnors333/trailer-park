@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router'
 import { setSearchTerm } from './actionCreators'
 const { string, func, object } = React.PropTypes
-
+//adding to gh-pages
 const Landing = React.createClass({
   contextTypes: {
     router: object
