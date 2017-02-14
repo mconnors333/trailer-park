@@ -23,7 +23,7 @@
     "preact": "^6.4.0",
     "preact-compat": "^3.9.3",
     "react": "^15.3.2",
-    "react-dom": "15.3.2",
+    "react-dom": "15.4.0",
     "react-redux": "4.4.0",
     "react-router": "4.0.0-alpha.5",
     "reactfire": "^1.0.0",

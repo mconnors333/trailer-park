@@ -14,7 +14,8 @@ class Add extends React.Component {
       year: ''
     }
 
-    this.handleInputChange = this.handleInputChange.bind(this);
+    this.handleInputChange = this.handleInputChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   handleInputChange (event) {
@@ -28,19 +29,35 @@ class Add extends React.Component {
   }
 
   handleSubmit (event) {
-    event.preventDefault()
-    axios({
-      method: 'post',
-      url: 'https://mattflix-8387b.firebaseio.com/shows/.json',
-      data: {
-        title: 'test',
-        description: 'test',
-        poster: 'https://images-na.ssl-images-amazon.com/images/M/MV5BMTc1ODA3MjAyOV5BMl5BanBnXkFtZTcwODA4MDE3OQ@@._V1_UX182_CR0,0,182,268_AL_.jpg',
-        imdbID: 'tt2381931',
-        trailer: 'meofoNuK3vo',
-        year: '2013-'
-      }
+    alert('A name was submitted: ' + this.state.title)
+
+    axios.post('https://trailer-park-7809d.firebaseio.com/shows/.json', {
+      title: this.state.title,
+      description: this.state.description,
+      poster: this.state.poster,
+      imdbID: this.state.imdbID,
+      trailer: this.state.trailer,
+      year: this.state.year
     })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    })
+    event.preventDefault()
+    // axios({
+    //   method: 'post',
+    //   url: 'https://trailer-park-7809d.firebaseio.com/shows/.json',
+    //   data: {
+    //     title: this.state.title,
+    //     description: this.state.description,
+    //     poster: this.state.poster,
+    //     imdbID: this.state.imdbID,
+    //     trailer: this.state.trailer,
+    //     year: this.state.year
+    //   }
+    // })
   }
 
   render () {

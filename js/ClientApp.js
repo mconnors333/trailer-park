@@ -11,16 +11,9 @@ import Add from './Add'
 import '../public/normalize.css'
 import '../public/style.css'
 
-// let data = axios.get(`https://mattflix-8387b.firebaseio.com/shows/.json`)
-//
-// data = data.then( (response) => {
-//   response.data
-// })
-// console.log(data)
-
 class App extends React.Component {
   constructor () {
-    super ();
+    super()
     this.state = {
       shows: []
     }
@@ -29,7 +22,7 @@ class App extends React.Component {
     var _this = this
     this.serverRequest =
       axios
-        .get('https://mattflix-8387b.firebaseio.com/shows/.json')
+        .get('https://trailer-park-7809d.firebaseio.com/shows/.json')
         .then(function (result) {
           _this.setState({
             shows: result.data
